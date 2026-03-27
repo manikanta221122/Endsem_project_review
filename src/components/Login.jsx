@@ -52,6 +52,7 @@ const Login = ({ setIsAuth }) => {
           type="email"
           name="email"
           placeholder="Enter Email"
+          value={data.email}
           onChange={handleChange}
         />
 
@@ -59,6 +60,7 @@ const Login = ({ setIsAuth }) => {
           type="password"
           name="password"
           placeholder="Enter Password"
+          value={data.password}
           onChange={handleChange}
         />
 
