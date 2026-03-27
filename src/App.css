@@ -1,0 +1,283 @@
+/* 🌐 ROOT VARIABLES (LIGHT DEFAULT) */
+:root {
+  --bg-gradient: linear-gradient(135deg, #667eea, #764ba2);
+  --text-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+  --input-bg: rgba(255, 255, 255, 0.2);
+  --table-bg: rgba(255, 255, 255, 0.08);
+  --table-header: rgba(255, 255, 255, 0.2);
+
+  --primary: #00c9a7;
+  --danger: #ff4d4d;
+  --success: #28a745;
+}
+
+/* 🌙 DARK THEME */
+body.dark {
+  --bg-gradient: linear-gradient(135deg, #141e30, #243b55);
+  --text-color: #ffffff;
+  --card-bg: rgba(0, 0, 0, 0.4);
+  --input-bg: rgba(255, 255, 255, 0.1);
+  --table-bg: rgba(255, 255, 255, 0.05);
+  --table-header: rgba(255, 255, 255, 0.15);
+
+  --primary: #4a90e2;
+  --danger: #ff6b6b;
+  --success: #2ecc71;
+}
+
+/* 🌞 LIGHT THEME */
+body.light {
+  --bg-gradient: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  --text-color: #222;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --input-bg: rgba(0, 0, 0, 0.05);
+  --table-bg: rgba(0, 0, 0, 0.03);
+  --table-header: rgba(0, 0, 0, 0.1);
+
+  --primary: #007bff;
+  --danger: #dc3545;
+  --success: #28a745;
+}
+
+/* 🌍 BODY */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  transition: 0.3s ease;
+}
+
+/* 📦 CONTAINER */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* 🧠 HEADING */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* 🔘 BUTTONS */
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+/* THEME BUTTON */
+.theme-btn {
+  background: var(--primary);
+  margin-right: 10px;
+}
+
+/* LOGOUT */
+.logout-btn {
+  background: var(--danger);
+}
+
+/* 🔍 SEARCH */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* 🧾 FORM */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+form input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* Item name bigger */
+form input:nth-child(1) {
+  flex: 2;
+}
+
+/* Add Button */
+form button {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 10px 18px;
+
+  background: var(--primary);
+}
+
+/* 📊 TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+
+  background: var(--table-bg);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Header */
+th {
+  background: var(--table-header);
+  padding: 12px;
+}
+
+/* Cells */
+td {
+  text-align: center;
+  padding: 12px;
+}
+
+/* Hover */
+tr:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Actions */
+button.view {
+  background: var(--success);
+  margin-right: 5px;
+}
+
+button.delete {
+  background: var(--danger);
+}
+
+/* 🧾 MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+}
+
+.modal-content button {
+  margin-top: 15px;
+  background: #333;
+  color: white;
+}
+
+/* 🔄 LOADING */
+.loader-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--text-color);
+}
+
+/* 🔵 SPINNER */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 🔔 TOAST */
+.Toastify__toast {
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 📊 SUMMARY CARDS */
+.summary {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.card p {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 768px) {
+  .summary {
+    flex-direction: column;
+  }
+
+  form {
+    flex-direction: column;
+  }
+}

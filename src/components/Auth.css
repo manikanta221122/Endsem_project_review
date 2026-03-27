@@ -1,0 +1,76 @@
+/* 🌐 FULL SCREEN CENTER */
+.auth-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: var(--bg-gradient); /* 🔥 SAME AS DASHBOARD */
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🧊 GLASS CARD (SAME STYLE AS CONTAINER) */
+.auth-box {
+  width: 350px;
+  padding: 30px;
+  border-radius: 20px;
+
+  background: var(--card-bg);
+  backdrop-filter: blur(15px);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  color: var(--text-color);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* 🧠 TITLE */
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ✏️ INPUTS (THEME BASED) */
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border: none;
+  border-radius: 10px;
+  outline: none;
+
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+/* 🔘 BUTTON */
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: var(--primary);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.auth-box button:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* 🔁 SWITCH TEXT */
+.switch-text {
+  margin-top: 15px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text-color);
+}
